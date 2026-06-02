@@ -1,14 +1,17 @@
 # Operating_system_SJF_preemptive
 Đồ án môn Hệ điều hành - Nhóm [9]. Cài đặt và mô phỏng giải thuật lập lịch CPU SJF Preemptive (SRTF)
 
-Để tránh mất code và xung đột sát deadline, TẤT CẢ THÀNH VIÊN team Code phải làm theo đúng 5 bước sau đây. KHÔNG push code trực tiếp vào nhánh main và develop.
+Để tránh mất code và xung đột sát deadline, team Code phải làm theo đúng 5 bước sau đây. **KHÔNG** push code trực tiếp vào nhánh `main` và `develop`.
 
-_Bước 1_: Lấy dự án về máy (Chỉ làm 1 lần duy nhất)
-- Mở Terminal (hoặc Git Bash / Terminal trong VS Code) tại thư mục bạn muốn lưu dự án, gõ lệnh:
+---
 
-Bash
+### Bước 1: Lấy dự án về máy (Chỉ làm 1 lần duy nhất)
+Mở Terminal (hoặc Git Bash / Terminal trong VS Code) tại thư mục bạn muốn lưu dự án, gõ lệnh:
+
+```bash
 git clone <Link_Github_Của_Dự_Án_Vừa_Tạo>
 cd Operating_system_SJF_preemptive
+
 
 _Bước 2_: Cập nhật & Tạo nhánh làm việc riêng (Làm mỗi khi bắt đầu code)
 - Luôn lấy dữ liệu mới nhất từ nhánh develop trước khi làm việc:
