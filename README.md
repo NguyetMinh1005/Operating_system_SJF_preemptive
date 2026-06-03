@@ -1,5 +1,4 @@
 
-```markdown
 # Operating_system_SJF_preemptive
 
 Chào mọi người! Đây là tài liệu hướng dẫn quy trình làm việc nhóm trên GitHub. Dự án của chúng ta code bằng Python.
