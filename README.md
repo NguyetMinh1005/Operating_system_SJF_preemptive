@@ -32,16 +32,18 @@ git commit -m "Hoàn thành class Process"
 git push origin feature/data-model
 
 🧑‍💻 **Người 2: Viết logic thuật toán (Core Algorithm)**
-- Nhiệm vụ: Viết hàm lập lịch SJF Preemptive trong file scheduler.py.
-- Thao tác thực hiện:
-_Bước 1_: Chuyển vào nhánh làm việc của bạn:
+
+**Nhiệm vụ:** Viết hàm lập lịch SJF Preemptive trong file scheduler.py.
+**Thao tác thực hiện:**
+- _Bước 1_: Chuyển vào nhánh làm việc của bạn:
 git checkout feature/core-algorithm
 
-_Bước 2_: Mở VS Code, tạo file **scheduler.py** và bắt đầu viết code.
-_Bước 3_: Sau khi code xong, gõ lần lượt 3 lệnh sau để đẩy code lên GitHub:
-git add .
-git commit -m "Hoàn thành thuật toán SJF" 
-git push origin feature/core-algorithm
+- _Bước 2_: Mở VS Code, tạo file **scheduler.py** và bắt đầu viết code.
+  
+- _Bước 3_: Sau khi code xong, gõ lần lượt 3 lệnh sau để đẩy code lên GitHub:
+  git add .
+  git commit -m "Hoàn thành thuật toán SJF"
+  git push origin feature/core-algorithm
 
 🧑‍💻 **Người 3: Xử lý dữ liệu & Test (Utils & Testing)**
 - Nhiệm vụ: Viết file utils.py (nhập/xuất dữ liệu dạng bảng) và main.py (chạy 3 bộ Test Case).
