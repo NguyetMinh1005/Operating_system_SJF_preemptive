@@ -1,68 +1,83 @@
 # Operating_system_SJF_preemptive
-Đồ án môn Hệ điều hành - Nhóm [9]. Cài đặt và mô phỏng giải thuật lập lịch CPU SJF Preemptive (SRTF)
-
-Để tránh mất code và xung đột sát deadline, team Code phải làm theo đúng 5 bước sau đây. **KHÔNG** push code trực tiếp vào nhánh `main` và `develop`.
+Chào mọi người! Đây là tài liệu hướng dẫn quy trình làm việc nhóm trên GitHub. Dự án của chúng ta code bằng Python.
+Để tránh mất code và đè code của nhau, TUYỆT ĐỐI KHÔNG CODE VÀ PUSH TRỰC TIẾP LÊN NHÁNH main HOẶC develop. Mỗi người sẽ làm việc trên một nhánh (branch) đã được tạo sẵn.
 
 ---
+PHẦN 1: THAO TÁC CHUNG (AI CŨNG PHẢI LÀM LẦN ĐẦU)
+Đây là thao tác để tải toàn bộ dự án từ GitHub về máy tính cá nhân của bạn. Chỉ làm 1 lần duy nhất lúc mới bắt đầu.
 
-### Bước 1: Lấy dự án về máy (Chỉ làm 1 lần duy nhất)
-Mở Terminal (hoặc Git Bash / Terminal trong VS Code) tại thư mục bạn muốn lưu dự án, gõ lệnh:
+Bước 1: Mở Terminal (hoặc Git Bash, Terminal trong VS Code) tại thư mục bạn muốn lưu dự án.
+Bước 2: Gõ lệnh sau để tải code về:
 
-```bash
-git clone <Link_Github_Của_Dự_Án_Vừa_Tạo>
+Bash
+git clone https://github.com/NguyetMinh1005/Operating_system_SJF_preemptive.git
+Bước 3: Di chuyển vào trong thư mục dự án vừa tải:
+
+Bash
 cd Operating_system_SJF_preemptive
 
+PHẦN 2: HƯỚNG DẪN DÀNH CHO TỪNG NHIỆM VỤ
+Leader đã tạo sẵn 3 nhánh riêng cho 3 người. Hãy tìm đến đúng tên của mình, chuyển sang nhánh đó và bắt đầu code.
 
-_Bước 2_: Cập nhật & Tạo nhánh làm việc riêng (Làm mỗi khi bắt đầu code)
-- Luôn lấy dữ liệu mới nhất từ nhánh develop trước khi làm việc:
+🧑‍💻 Người 1: Xây dựng cấu trúc dữ liệu (Data Model)
+Nhiệm vụ: Viết class Process trong file process.py.
+Thao tác thực hiện:
 
-Bash
-git checkout develop
-git pull origin develop
-
-- Tạo nhánh mới cho nhiệm vụ của bạn (Xem tên nhánh ở bảng phân công phía dưới) và chuyển sang nhánh đó:
-
-Bash
-git checkout -b <tên_nhánh_của_bạn>
-Ví dụ: git checkout -b feature/gui
-
-_Bước 3_: Lưu lại code sau khi làm xong
-- Sau khi code xong và test chạy ổn trên máy cá nhân, gõ lệnh:
+Chuyển vào nhánh làm việc của bạn:
 
 Bash
-# Thêm tất cả file code vừa thay đổi vào Git
+git checkout feature/data-model
+Mở VS Code, tạo file process.py và bắt đầu viết code.
+
+Sau khi code xong (hoặc xong một phần muốn lưu lại), gõ lần lượt 3 lệnh sau để đẩy lên GitHub:
+
+Bash
 git add .
+git commit -m "Hoàn thành class Process" 
+git push origin feature/data-model
+🧑‍💻 Người 2: Viết logic thuật toán (Core Algorithm)
+Nhiệm vụ: Viết hàm lập lịch SJF Preemptive trong file scheduler.py.
+Thao tác thực hiện:
 
-# Ghi chú công việc vừa làm (Ghi tiếng Việt không dấu hoặc tiếng Anh)
-git commit -m "Hoan thanh logic tinh toan Waiting Time"
-
-_Bước 4_: Đẩy nhánh của bạn lên GitHub
-- Đưa nhánh làm việc của bạn lên kho lưu trữ chung:
+Chuyển vào nhánh làm việc của bạn:
 
 Bash
-git push origin <tên_nhánh_của_bạn>
+git checkout feature/core-algorithm
+Mở VS Code, tạo file scheduler.py và bắt đầu viết code (có thể thỏa thuận trước với Người 1 về các thuộc tính của Process để code song song).
 
-_Bước 5_: Tạo Pull Request (Yêu cầu gộp code)
+Sau khi code xong, gõ lần lượt 3 lệnh sau để đẩy lên GitHub:
 
-- Lên trang GitHub của dự án.
-- Nhấn vào nút màu xanh/vàng "Compare & pull request".
-- Cấu hình gộp nhánh
-    + Base (Nhận): Chọn nhánh develop.
-    + Compare (Gửi): Chọn nhánh feature/... của bạn.
-- Viết mô tả ngắn gọn bạn đã upload/sửa những gì.
-  VD: "Add file code <tên file code>"
-- Nhấn Create pull request và tag Leader vào kiểm tra, duyệt code.
+Bash
+git add .
+git commit -m "Hoàn thành thuật toán SJF" 
+git push origin feature/core-algorithm
+🧑‍💻 Người 3: Xử lý dữ liệu & Test (Utils & Testing)
+Nhiệm vụ: Viết file utils.py (nhập/xuất dữ liệu dạng bảng) và main.py (chạy 3 bộ Test Case).
+Thao tác thực hiện:
 
-📁 QUY ĐỊNH NỘP FILE
-Kho GitHub này CHỈ DÀNH CHO CODE.
-✅ Những file nộp lên Git:
-1. File mã nguồn Python: .py
-2. File cấu hình môi trường: requirements.txt
-3. File dữ liệu test: .json, .csv (nếu có).
+Chuyển vào nhánh làm việc của bạn:
 
-❌ Những file TUYỆT ĐỐI KHÔNG đẩy lên Git:
-1. File tài liệu: .docx (Word), .xlsx (Excel), .pptx (PowerPoint).
-2. File đóng gói: .exe
-3. Thư mục môi trường ảo và bộ nhớ đệm: venv/, env/, __pycache__/
+Bash
+git checkout feature/utils-test
+Mở VS Code, tạo các file cần thiết và bắt đầu viết code.
 
-👉 Lưu ý đối với Team Nội Dung & Slide (TV2, TV3, TV8): Các bạn không cần thao tác với GitHub. Khi hoàn thành báo cáo Word, bảng Excel so sánh hoặc Slide PPT, vui lòng gửi trực tiếp file qua Zalo Group hoặc upload lên thư mục Google Drive chung của nhóm để Leader tổng hợp.
+Sau khi test xong, gõ lần lượt 3 lệnh sau để đẩy lên GitHub:
+
+Bash
+git add .
+git commit -m "Hoàn thành format bảng và test cases" 
+git push origin feature/utils-test
+PHẦN 3: CÁCH NỘP CODE (TẠO PULL REQUEST)
+Khi bạn đã hoàn thành nhiệm vụ và gõ lệnh git push thành công, bạn cần "nộp" code để Leader duyệt và ghép vào dự án chung.
+
+Lên trang web GitHub của dự án: Link dự án
+
+Bạn sẽ thấy một dòng thông báo màu xanh lá cây có nút Compare & pull request. Hãy bấm vào đó.
+
+Kiểm tra xem hướng mũi tên ghép code đã đúng là từ nhánh của bạn trỏ vào develop chưa. (Ví dụ: base: develop <--- compare: feature/data-model).
+
+Ghi một vài dòng mô tả bạn đã làm được những gì và bấm Create pull request.
+
+Nhắn tin vào group thông báo để Leader vào duyệt (Merge) code.
+
+Chúc team hoàn thành đồ án xuất sắc và không bị bug!
